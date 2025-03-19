@@ -1,0 +1,15 @@
+stages:
+  - deploy
+
+apply_changes:
+  stage: deploy
+  image: hashicorp/terraform:latest
+  variables:
+    TF_VAR_container_image: $IMAGE_TAG
+  script:
+    - echo "Container Image Tag - $TF_VAR_container_image"
+    - cd infra/environments/dev
+    - terraform init -migrate-state
+    - terraform apply -auto-approve
+  only:
+    - triggers

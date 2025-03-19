@@ -1,0 +1,69 @@
+Folder PATH listing for volume Windows 
+Volume serial number is 14EC-61BF
+C:.
+|   .gitlab-ci.yml
+|   estructura.txt
+|   README.md
+|   terraform.tfstate
+|   
+\---infra
+    |   .terraform.lock.hcl
+    |   outputs.tf
+    |   provider.tf
+    |   terraform.tfvars
+    |   variables.tf
+    |   
+    +---.terraform
+    |   \---providers
+    |       \---registry.terraform.io
+    |           \---hashicorp
+    |               \---aws
+    |                   \---5.83.1
+    |                       \---windows_amd64
+    |                               LICENSE.txt
+    |                               terraform-provider-aws_v5.83.1_x5.exe
+    |                               
+    +---environments
+    |   +---dev
+    |   |   |   .terraform.lock.hcl
+    |   |   |   backend.tf
+    |   |   |   first
+    |   |   |   main.tf
+    |   |   |   
+    |   |   \---.terraform
+    |   |       |   terraform.tfstate
+    |   |       |   
+    |   |       +---modules
+    |   |       |       modules.json
+    |   |       |       
+    |   |       \---providers
+    |   |           \---registry.terraform.io
+    |   |               \---hashicorp
+    |   |                   \---aws
+    |   |                       \---5.83.1
+    |   |                           \---windows_amd64
+    |   |                                   LICENSE.txt
+    |   |                                   terraform-provider-aws_v5.83.1_x5.exe
+    |   |                                   
+    |   \---stage
+    \---modules
+        +---ecr
+        |       main.tf
+        |       outputs.tf
+        |       variables.tf
+        |       
+        +---ecs
+        |       main.tf
+        |       outputs.tf
+        |       variables.tf
+        |       
+        +---iam
+        |       main.tf
+        |       outputs.tf
+        |       variables.tf
+        |       
+        \---networking
+                main.tf
+                outputs.tf
+                variables.tf
+                
